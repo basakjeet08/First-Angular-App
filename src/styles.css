@@ -48,3 +48,12 @@ button:active {
 button:disabled {
   opacity: 0.5;
 }
+
+input {
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  outline: none;
+  border: none;
+}
