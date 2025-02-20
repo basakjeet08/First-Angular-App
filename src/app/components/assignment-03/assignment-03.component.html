@@ -1,0 +1,27 @@
+<div>
+  <!-- Button to toggle visibility -->
+  <button (click)="onToggleVisibilityClick()">Display Details</button>
+
+  <!-- Paragraph whose visibility is being toggled -->
+  <p
+    [ngClass]="{
+      visible: isParagraphVisible,
+      hidden: !isParagraphVisible
+    }"
+  >
+    Orewa Monkey D Luffy
+  </p>
+
+  <!-- Div which contains the logs of button clicks -->
+  <div *ngFor="let log of logs; let i = index">
+    <!-- All the Button Click Log -->
+    <p
+      [ngStyle]="{ backgroundColor: i >= 5 ? 'blue' : 'transparent' }"
+      [ngClass]="{
+        'white-text': i >= 5
+      }"
+    >
+      Log : {{ i }} ----------- Time : {{ log }}
+    </p>
+  </div>
+</div>

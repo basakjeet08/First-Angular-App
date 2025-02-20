@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { CounterComponent } from './components/counter/counter.component';
+import { Assignment03Component } from './components/assignment-03/assignment-03.component';
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
 // In the declarations we need to declare all the Components we are creating [Note :- If we generate components from the CLI then they are added automatically]
@@ -20,6 +21,7 @@ import { CounterComponent } from './components/counter/counter.component';
     TwoWayBindingComponent,
     LoginFormComponent,
     CounterComponent,
+    Assignment03Component,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
