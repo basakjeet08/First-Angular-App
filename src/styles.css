@@ -29,3 +29,22 @@ body {
   background: var(--background);
   color: var(--onBackground);
 }
+
+button {
+  padding: 10px 12px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  color: var(--onBackground);
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 0.3;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
