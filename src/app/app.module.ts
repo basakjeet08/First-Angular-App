@@ -6,6 +6,7 @@ import { PropBindingComponent } from './components/prop-binding/prop-binding.com
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
 import { FormsModule } from '@angular/forms';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
 // In the declarations we need to declare all the Components we are creating [Note :- If we generate components from the CLI then they are added automatically]
@@ -16,6 +17,7 @@ import { TwoWayBindingComponent } from './components/two-way-binding/two-way-bin
     PropBindingComponent,
     EventBindingComponent,
     TwoWayBindingComponent,
+    LoginFormComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
