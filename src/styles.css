@@ -32,6 +32,10 @@ body {
 button {
   padding: 10px 12px;
   background-color: var(--primary-color);
+
+  border: none;
+  outline: none;
+
   border-radius: 8px;
   color: var(--onBackground);
 }

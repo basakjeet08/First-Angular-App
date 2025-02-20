@@ -1,0 +1,10 @@
+<div>
+  <!-- This is the first child which takes input from the user (addClick) is a custom event emitted from the child component for the parent component -->
+  <app-first-child (addClick)="onAddClick($event)" />
+
+  <!-- Line Break for better separation -->
+  <hr />
+
+  <!-- This is the second child which shows the input in the UI [itemList] is a custom property created in the child component to send data from the parent. (deleteItem) is a custom event emitted from the child component for the parent component -->
+  <app-second-child [itemList]="items" (deleteItem)="onDeleteClick($event)" />
+</div>

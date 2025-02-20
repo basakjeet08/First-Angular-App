@@ -1,0 +1,7 @@
+<div id="item-container">
+  <!-- Looping through all the items and then creating a p tag for each item (Use of directives along with Event Binding) -->
+  <div class="item" *ngFor="let item of items; let i = index">
+    <p>Item : {{ i }} -> {{ item }}</p>
+    <button (click)="onItemClick(i)">Delete</button>
+  </div>
+</div>
