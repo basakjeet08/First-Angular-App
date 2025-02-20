@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { CounterComponent } from './components/counter/counter.component';
+import { InterpolationComponent } from './components/interpolation/interpolation.component';
+import { PropBindingComponent } from './components/prop-binding/prop-binding.component';
 
+// The NgModule decoration is used for every module created. Here app is considered as a module in the project
+// In the declarations we need to declare all the Components we are creating [Note :- If we generate components from the CLI then they are added automatically]
 @NgModule({
-  declarations: [AppComponent, CounterComponent],
+  declarations: [AppComponent, InterpolationComponent, PropBindingComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
