@@ -1,0 +1,13 @@
+<!-- Example of accessing the Reference from the Component file directly -->
+<div class="outer-container">
+  <h2>ViewChild() Usage</h2>
+
+  <div class="inner-container">
+    <!-- Here we create a reference to the Input HTML Element -->
+    <input type="text" #inputReference />
+
+    <!-- We are Using the @ViewChild() decoration to access the inputReference2 directly in the Component File -->
+    <button (click)="onSubmitClick()">Take Reference from Component</button>
+    <p>{{ inputValue }}</p>
+  </div>
+</div>

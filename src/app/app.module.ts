@@ -12,6 +12,9 @@ import { Assignment03Component } from './components/assignment-03/assignment-03.
 import { ComponentCommunicationParentComponent } from './components/component-communication-parent/component-communication-parent.component';
 import { FirstChildComponent } from './components/component-communication-parent/first-child/first-child.component';
 import { SecondChildComponent } from './components/component-communication-parent/second-child/second-child.component';
+import { TemplateViewChildDiffComponent } from './components/template-view-child-diff/template-view-child-diff.component';
+import { TemplateReffComponent } from './components/template-view-child-diff/template-reff/template-reff.component';
+import { ViewChildComponent } from './components/template-view-child-diff/view-child/view-child.component';
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
 // In the declarations we need to declare all the Components we are creating [Note :- If we generate components from the CLI then they are added automatically]
@@ -28,6 +31,9 @@ import { SecondChildComponent } from './components/component-communication-paren
     ComponentCommunicationParentComponent,
     FirstChildComponent,
     SecondChildComponent,
+    TemplateViewChildDiffComponent,
+    TemplateReffComponent,
+    ViewChildComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

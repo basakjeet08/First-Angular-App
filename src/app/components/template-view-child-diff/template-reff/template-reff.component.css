@@ -1,0 +1,14 @@
+.outer-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+  justify-content: center;
+}
+
+.inner-container {
+  display: flex;
+  gap: 16px;
+
+  align-items: center;
+}

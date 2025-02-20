@@ -1,0 +1,14 @@
+<div class="outer-container">
+  <!-- This showcases the use of template references -->
+  <app-template-reff></app-template-reff>
+
+  <!-- This shows the use of @ViewChild() Decoration -->
+  <app-view-child></app-view-child>
+
+  <h2>Getting Child Data with ViewChild : {{ childData || "Nothing" }}</h2>
+
+  <!-- This button click triggers a function which fetches data from the Child Component using @ViewChild() -->
+  <div>
+    <button (click)="getChildData()">Get Child Data</button>
+  </div>
+</div>

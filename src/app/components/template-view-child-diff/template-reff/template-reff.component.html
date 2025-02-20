@@ -1,0 +1,27 @@
+<div class="outer-container">
+  <h2>Template Reference</h2>
+
+  <!-- Example of sending the Reference from View -> Component -->
+  <div class="inner-container">
+    <!-- Here we create a reference to the Input HTML Element -->
+    <input type="text" #inputReference1 />
+
+    <!-- We are passing the input element reference to the component for further data processing -->
+    <button (click)="onSubmitClick(inputReference1)">
+      Take Reference from View
+    </button>
+    <p>{{ inputValue1 }}</p>
+  </div>
+
+  <!-- Example of accessing the Reference from the Component file directly -->
+  <div class="inner-container">
+    <!-- Here we create a reference to the Input HTML Element -->
+    <input type="text" #inputReference2 />
+
+    <!-- We are Using the @ViewChild() decoration to access the inputReference2 directly in the Component File -->
+    <button (click)="onSubmitClickWithoutPassingReference()">
+      Take Reference from Component
+    </button>
+    <p>{{ inputValue2 }}</p>
+  </div>
+</div>
