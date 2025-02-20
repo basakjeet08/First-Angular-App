@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./event-binding.component.css'],
 })
 export class EventBindingComponent {
-  // This is a random number which is changed every time we press the generate random button
   randomNumber: number = 0;
   input: string = '';
 
@@ -16,8 +15,7 @@ export class EventBindingComponent {
   }
 
   // This is invoked when the input has some changes
-  onChangeListener(value: string) {
-    this.input = value;
-    console.log(value);
+  onInputListener(event: Event) {
+    this.input = (event.target as HTMLInputElement).value;
   }
 }

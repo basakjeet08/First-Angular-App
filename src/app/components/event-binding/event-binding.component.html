@@ -2,5 +2,7 @@
   <p>The random Number is : {{ randomNumber }}</p>
   <button (click)="onGenerateRandom()">Generate Random</button>
 
-  <input #input type="text" (change)="onChangeListener(input.value)" />
+  <!-- Event Binding in inputs and passing event object -->
+  <input type="text" (input)="onInputListener($event)" />
+  <p>Event + String interpolation : {{ input }}</p>
 </div>

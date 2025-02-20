@@ -1,0 +1,11 @@
+<div>
+  <h2>1 Way vs 2 Way</h2>
+
+  <!-- 1 way binding Showcase -->
+  <input type="text" (input)="onInputListener($event)" placeholder="One Way" />
+  <p>1 Way Binding : {{ input }}</p>
+
+  <!-- 2 way binding Showcase -->
+  <input type="text" [(ngModel)]="input" placeholder="Two Way" />
+  <p>2 Way Binding : {{ input }}</p>
+</div>
