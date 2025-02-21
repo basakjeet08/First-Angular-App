@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 })
 export class Assignment03Component {
   isParagraphVisible: boolean = false;
-  logs: Date[] = [];
+  logs: string[] = [];
 
   // This function is invoked when the Visibility Button is clicked
   onToggleVisibilityClick() {
     this.isParagraphVisible = !this.isParagraphVisible;
 
-    this.logs.push(new Date());
+    this.logs.push(new Date().toLocaleTimeString());
   }
 }
