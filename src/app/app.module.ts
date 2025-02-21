@@ -19,6 +19,9 @@ import { NgTagsComponent } from './components/ng-tags/ng-tags.component';
 import { ChildComponent } from './components/ng-tags/child/child.component';
 import { BasicHighlightDirective } from './directives/basic-highlight.directive';
 import { DirectiveTestingComponent } from './components/directive-testing/directive-testing.component';
+import { RendererHighlightDirective } from './directives/renderer-highlight.directive';
+import { HostListenerHighlightDirective } from './directives/host-listener-highlight.directive';
+import { HostListenerAndBindingDirective } from './directives/host-listener-and-binding.directive';
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
 // In the declarations we need to declare all the Components we are creating [Note :- If we generate components from the CLI then they are added automatically]
@@ -42,6 +45,9 @@ import { DirectiveTestingComponent } from './components/directive-testing/direct
     ChildComponent,
     BasicHighlightDirective,
     DirectiveTestingComponent,
+    RendererHighlightDirective,
+    HostListenerHighlightDirective,
+    HostListenerAndBindingDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
