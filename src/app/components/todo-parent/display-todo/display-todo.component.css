@@ -28,3 +28,19 @@
   align-self: center;
   color: var(--primary-color);
 }
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  align-items: center;
+}
+
+.button-container > button {
+  flex: 1;
+}
+
+.strike {
+  text-decoration: line-through;
+}

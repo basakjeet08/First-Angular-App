@@ -31,8 +31,13 @@ export class DisplayTodoComponent implements OnInit, OnDestroy {
   }
 
   // This function is used to delete a todo from the list
-  onDeleteClick(id: string) {
+  onDeleteClick(id: string): void {
     this.todoService.removeTodo(id);
+  }
+
+  // This function is invoked when the user chooses to mark as done for a todo
+  toggleDoneState(id: string): void {
+    this.todoService.toggleDoneState(id);
   }
 
   // Prevent memory leaks by unsubscribing

@@ -30,4 +30,14 @@ export class TodoService {
     // Emitting the new Todo state for the components
     this.todoEmitter.emit(this.getTodoList());
   }
+
+  // This function marks the todo as done and updates it
+  toggleDoneState(id: string) {
+    this.todoList = this.todoList.map((todo) =>
+      todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
+    );
+
+    // Emitting the new Todo state for the components
+    this.todoEmitter.emit(this.getTodoList());
+  }
 }

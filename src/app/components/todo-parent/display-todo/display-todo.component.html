@@ -2,12 +2,21 @@
   <!-- Grid Items  -->
   <div class="grid-item" *ngFor="let todo of todoList">
     <!-- Todo Title -->
-    <h3 class="todo-title">{{ todo.title }}</h3>
+    <h3 class="todo-title" [ngClass]="{ strike: todo.isCompleted }">
+      {{ todo.title }}
+    </h3>
 
     <!-- Todo Description -->
-    <p>{{ todo.description }}</p>
+    <p [ngClass]="{ strike: todo.isCompleted }">
+      {{ todo.description }}
+    </p>
 
     <!-- Button to delete the Todo -->
-    <button (click)="onDeleteClick(todo.id)">Delete</button>
+    <div class="button-container">
+      <button (click)="onDeleteClick(todo.id)">Delete</button>
+      <button (click)="toggleDoneState(todo.id)">
+        {{ todo.isCompleted ? "Reset" : "Mark as Done" }}
+      </button>
+    </div>
   </div>
 </div>
