@@ -1,0 +1,13 @@
+<div id="grid-container">
+  <!-- Grid Items  -->
+  <div class="grid-item" *ngFor="let todo of todoList">
+    <!-- Todo Title -->
+    <h3 class="todo-title">{{ todo.title }}</h3>
+
+    <!-- Todo Description -->
+    <p>{{ todo.description }}</p>
+
+    <!-- Button to delete the Todo -->
+    <button (click)="onDeleteClick(todo.id)">Delete</button>
+  </div>
+</div>

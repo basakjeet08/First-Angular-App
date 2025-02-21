@@ -27,6 +27,9 @@ import { ServiceTestingComponent } from './components/service-testing/service-te
 import { InputterComponent } from './components/service-testing/inputter/inputter.component';
 import { ShowDataComponent } from './components/service-testing/show-data/show-data.component';
 import { LoggerService } from './services/logger.service';
+import { TodoParentComponent } from './components/todo-parent/todo-parent.component';
+import { TodoInputComponent } from './components/todo-parent/todo-input/todo-input.component';
+import { DisplayTodoComponent } from './components/todo-parent/display-todo/display-todo.component';
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
 // In the declarations we need to declare all the Components we are creating [Note :- If we generate components from the CLI then they are added automatically]
@@ -57,6 +60,9 @@ import { LoggerService } from './services/logger.service';
     ServiceTestingComponent,
     InputterComponent,
     ShowDataComponent,
+    TodoParentComponent,
+    TodoInputComponent,
+    DisplayTodoComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [LoggerService],

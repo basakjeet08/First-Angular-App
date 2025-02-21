@@ -1,0 +1,20 @@
+<div class="input-container">
+  <!-- Input to get the title of the todo -->
+  <input
+    class="input-width"
+    type="text"
+    placeholder="Enter the Title"
+    #titleInput
+  />
+
+  <!-- Input to get the description of the todo -->
+  <input
+    class="input-width"
+    type="text"
+    placeholder="Enter the Description"
+    #descriptionInput
+  />
+
+  <!-- This is the add button -->
+  <button (click)="onAddTodoClick()">Add Todo</button>
+</div>

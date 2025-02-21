@@ -1,0 +1,30 @@
+#grid-container {
+  min-width: 100vw;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 32px;
+  padding: 32px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 32px;
+  padding: 32px;
+
+  border-radius: 12px;
+  background-color: var(--card);
+}
+
+.grid-item:hover {
+  box-shadow: 5px 5px 15px var(--primary-color);
+}
+
+.todo-title {
+  align-self: center;
+  color: var(--primary-color);
+}

@@ -96,3 +96,11 @@
 - How can we use service for event and data propagation
 - Learned how to inject a Service on another service
 - Practices creating services and created a basic Todo Application using that
+
+## Module 26 - Course Project - Services & Dependency Injection :-
+
+- Basic Folder structure for creating and keeping Services
+- Learned to break the whole business logic into services layers and separatedly create them
+- Learned the basic thought process of creating a service layer while creating a project
+- Created a basic project to implement services and its concepts
+- Created a basic TODO Application using Services
