@@ -23,6 +23,10 @@ import { RendererHighlightDirective } from './directives/renderer-highlight.dire
 import { HostListenerHighlightDirective } from './directives/host-listener-highlight.directive';
 import { HostListenerAndBindingDirective } from './directives/host-listener-and-binding.directive';
 import { StructuralDirective } from './directives/structural.directive';
+import { ServiceTestingComponent } from './components/service-testing/service-testing.component';
+import { InputterComponent } from './components/service-testing/inputter/inputter.component';
+import { ShowDataComponent } from './components/service-testing/show-data/show-data.component';
+import { LoggerService } from './services/logger.service';
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
 // In the declarations we need to declare all the Components we are creating [Note :- If we generate components from the CLI then they are added automatically]
@@ -50,9 +54,12 @@ import { StructuralDirective } from './directives/structural.directive';
     HostListenerHighlightDirective,
     HostListenerAndBindingDirective,
     StructuralDirective,
+    ServiceTestingComponent,
+    InputterComponent,
+    ShowDataComponent,
   ],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  providers: [LoggerService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

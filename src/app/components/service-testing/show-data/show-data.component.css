@@ -1,0 +1,19 @@
+#outer-div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 16px;
+  padding: 16px;
+
+  justify-content: space-between;
+
+  border-radius: 8px;
+  background-color: var(--card);
+}

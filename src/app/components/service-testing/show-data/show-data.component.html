@@ -1,0 +1,13 @@
+<div id="outer-div">
+  <!-- For Loop which creates card for all the entries -->
+  <div
+    class="inner-container"
+    *ngFor="let userEntry of userEntries; let i = index"
+  >
+    <!-- Name of the user -->
+    <p>{{ userEntry }}</p>
+
+    <!-- Button to delete the user -->
+    <button (click)="onDeleteClick(i)">Delete</button>
+  </div>
+</div>

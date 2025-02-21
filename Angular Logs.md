@@ -90,4 +90,9 @@
 
 ## Module 25 - Using Services & Dependency Injection :-
 
--
+- Learned about services (What are they and why should we use those)
+- Learned about dependency injection and Hierarchical Injcetor
+- Learned how to create a Service and then inject it to the components
+- How can we use service for event and data propagation
+- Learned how to inject a Service on another service
+- Practices creating services and created a basic Todo Application using that
