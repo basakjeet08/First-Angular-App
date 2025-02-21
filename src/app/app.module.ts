@@ -22,6 +22,7 @@ import { DirectiveTestingComponent } from './components/directive-testing/direct
 import { RendererHighlightDirective } from './directives/renderer-highlight.directive';
 import { HostListenerHighlightDirective } from './directives/host-listener-highlight.directive';
 import { HostListenerAndBindingDirective } from './directives/host-listener-and-binding.directive';
+import { StructuralDirective } from './directives/structural.directive';
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
 // In the declarations we need to declare all the Components we are creating [Note :- If we generate components from the CLI then they are added automatically]
@@ -48,6 +49,7 @@ import { HostListenerAndBindingDirective } from './directives/host-listener-and-
     RendererHighlightDirective,
     HostListenerHighlightDirective,
     HostListenerAndBindingDirective,
+    StructuralDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
