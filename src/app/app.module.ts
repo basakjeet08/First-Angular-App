@@ -15,6 +15,8 @@ import { SecondChildComponent } from './components/component-communication-paren
 import { TemplateViewChildDiffComponent } from './components/template-view-child-diff/template-view-child-diff.component';
 import { TemplateReffComponent } from './components/template-view-child-diff/template-reff/template-reff.component';
 import { ViewChildComponent } from './components/template-view-child-diff/view-child/view-child.component';
+import { NgTagsComponent } from './components/ng-tags/ng-tags.component';
+import { ChildComponent } from './components/ng-tags/child/child.component';
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
 // In the declarations we need to declare all the Components we are creating [Note :- If we generate components from the CLI then they are added automatically]
@@ -34,6 +36,8 @@ import { ViewChildComponent } from './components/template-view-child-diff/view-c
     TemplateViewChildDiffComponent,
     TemplateReffComponent,
     ViewChildComponent,
+    NgTagsComponent,
+    ChildComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
