@@ -1,4 +1,4 @@
-<div>
+<div id="outer-container">
   <h2>Ng Directives Assignment</h2>
   <!-- Button to toggle visibility -->
   <button (click)="onToggleVisibilityClick()">Display Details</button>
@@ -17,9 +17,9 @@
   <div *ngFor="let log of logs; let i = index">
     <!-- All the Button Click Log -->
     <p
-      [ngStyle]="{ backgroundColor: i >= 5 ? 'blue' : 'transparent' }"
+      [ngStyle]="{ backgroundColor: i >= 5 ? 'var(--card)' : 'transparent' }"
       [ngClass]="{
-        'white-text': i >= 5
+        'primary-text': i >= 5
       }"
     >
       Log : {{ i }} ----------- Time : {{ log }}

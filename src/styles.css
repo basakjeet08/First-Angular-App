@@ -16,19 +16,6 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 32px;
-
-  background: var(--background);
-  color: var(--onBackground);
-}
-
 button {
   padding: 10px 12px;
   background-color: var(--primary-color);

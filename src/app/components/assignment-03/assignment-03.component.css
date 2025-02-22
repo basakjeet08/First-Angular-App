@@ -1,3 +1,9 @@
+#outer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .visible {
   visibility: visible;
 }
@@ -6,6 +12,10 @@
   visibility: hidden;
 }
 
-.white-text {
-  color: lightcoral;
+p {
+  padding: 8px;
+}
+
+.primary-text {
+  color: var(--primary-color);
 }
