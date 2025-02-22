@@ -27,29 +27,22 @@ ul {
 
 #outer-nav-container {
   width: 50%;
-
   display: flex;
   justify-content: space-around;
 }
 
-li {
+.outer-nav-option {
+  position: relative;
+
   padding: 8px 16px;
   border-radius: 6px;
 
   cursor: pointer;
 }
 
-li:hover {
+.outer-nav-option:hover,
+a:hover {
   background-color: var(--primary-color);
-}
-
-a {
-  text-decoration: none;
-  color: var(--onBackground);
-}
-
-.outer-nav-option {
-  position: relative;
 }
 
 .outer-nav-option:hover > .inner-nav-container {
@@ -65,11 +58,22 @@ a {
   flex-direction: column;
 
   gap: 12px;
-  padding: 16px 32px;
+  padding: 16px;
 
   z-index: 1;
   border-radius: 8px;
   background-color: var(--card);
+}
+
+a {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 6px;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+  color: var(--onBackground);
 }
 
 main {

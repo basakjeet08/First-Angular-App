@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 button {
   padding: 10px 12px;
   background-color: var(--primary-color);
