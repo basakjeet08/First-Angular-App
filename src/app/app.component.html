@@ -1,44 +1,60 @@
-<!-- <div> -->
-<!-- In this example we use string interpolation to bind data -->
-<!-- <app-interpolation /> -->
+<header>
+  <nav>
+    <ul id="outer-nav-container">
+      <!-- Day 01 Option -->
+      <li class="outer-nav-option">
+        Day 01
+        <ul class="inner-nav-container">
+          <li><a routerLink="/">Home Page</a></li>
+        </ul>
+      </li>
 
-<!-- In this example we use property binding -->
-<!-- <app-prop-binding /> -->
+      <!-- Day 02 Option -->
+      <li class="outer-nav-option">
+        Day 02
+        <ul class="inner-nav-container">
+          <li><a routerLink="/interpolation">String Interpolation</a></li>
+          <li><a routerLink="/prop-binding">Property Binding</a></li>
+          <li><a routerLink="/event-binding">Event Binding</a></li>
+          <li><a routerLink="/two-way-binding">2 Way Binding</a></li>
+          <li><a routerLink="/login-form">Login Form</a></li>
+          <li><a routerLink="/counter">Counter</a></li>
+        </ul>
+      </li>
 
-<!-- In this example we use event binding -->
-<!-- <app-event-binding /> -->
+      <!-- Day 03 Option -->
+      <li class="outer-nav-option">
+        Day 03
+        <ul class="inner-nav-container">
+          <li><a routerLink="/assignment03">Directives - Assignment 03</a></li>
+          <li>
+            <a routerLink="/component-communication-parent"
+              >Communication B/w Components</a
+            >
+          </li>
+          <li>
+            <a routerLink="/template-view-child-diff"
+              >Template and ViewChild()</a
+            >
+          </li>
+          <li><a routerLink="/ng-tags">Ng Tags</a></li>
+          <li><a routerLink="/directive-testing">Custom Directives</a></li>
+        </ul>
+      </li>
 
-<!-- This is an example of two way Binding -->
-<!-- <app-two-way-binding /> -->
+      <!-- Day 04 Option -->
+      <li class="outer-nav-option">
+        Day 04
+        <ul class="inner-nav-container">
+          <li><a routerLink="/service-testing">Service</a></li>
+          <li><a routerLink="/todo">Todo Project</a></li>
+          <li>Routes</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-<!-- Form Login -->
-<!-- <app-login-form /> -->
-
-<!-- Counter Component -->
-<!-- <app-counter /> -->
-<!-- </div> -->
-
-<!-- <div> -->
-<!-- This assignment is for learning more about ng Directives -->
-<!-- <app-assignment-03 /> -->
-
-<!-- Communication between nested components (parent, children and siblings)-->
-<!-- <app-component-communication-parent /> -->
-
-<!-- This component defines the usage difference between @ViewChild and Template references -->
-<!-- <app-template-view-child-diff /> -->
-
-<!-- Showcase of all the NG tags -->
-<!-- <app-ng-tags /> -->
-<!-- </div> -->
-
-<!-- <div> -->
-<!-- Showcasing the use of custom directives -->
-<!-- <app-directive-testing /> -->
-
-<!-- Showcasing how to create and use service -->
-<!-- <app-service-testing /> -->
-<!-- </div> -->
-
-<!-- This is the component that is a TODO App Project -->
-<app-todo-parent />
+<main>
+  <router-outlet></router-outlet>
+</main>

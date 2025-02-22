@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
 import { InterpolationComponent } from './components/interpolation/interpolation.component';
 import { PropBindingComponent } from './components/prop-binding/prop-binding.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
@@ -30,6 +31,31 @@ import { LoggerService } from './services/logger.service';
 import { TodoParentComponent } from './components/todo-parent/todo-parent.component';
 import { TodoInputComponent } from './components/todo-parent/todo-input/todo-input.component';
 import { DisplayTodoComponent } from './components/todo-parent/display-todo/display-todo.component';
+import { HomeComponent } from './components/home/home.component';
+
+// These are the routes for this component / module
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'interpolation', component: InterpolationComponent },
+  { path: 'prop-binding', component: PropBindingComponent },
+  { path: 'event-binding', component: EventBindingComponent },
+  { path: 'two-way-binding', component: TwoWayBindingComponent },
+  { path: 'login-form', component: LoginFormComponent },
+  { path: 'counter', component: CounterComponent },
+  { path: 'assignment03', component: Assignment03Component },
+  {
+    path: 'component-communication-parent',
+    component: ComponentCommunicationParentComponent,
+  },
+  {
+    path: 'template-view-child-diff',
+    component: TemplateViewChildDiffComponent,
+  },
+  { path: 'ng-tags', component: NgTagsComponent },
+  { path: 'directive-testing', component: DirectiveTestingComponent },
+  { path: 'service-testing', component: ServiceTestingComponent },
+  { path: 'todo', component: TodoParentComponent },
+];
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
 // In the declarations we need to declare all the Components we are creating [Note :- If we generate components from the CLI then they are added automatically]
@@ -63,8 +89,9 @@ import { DisplayTodoComponent } from './components/todo-parent/display-todo/disp
     TodoParentComponent,
     TodoInputComponent,
     DisplayTodoComponent,
+    HomeComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
   providers: [LoggerService],
   bootstrap: [AppComponent],
 })
