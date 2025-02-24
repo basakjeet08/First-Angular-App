@@ -32,6 +32,9 @@ import { TodoParentComponent } from './components/todo-parent/todo-parent.compon
 import { TodoInputComponent } from './components/todo-parent/todo-input/todo-input.component';
 import { DisplayTodoComponent } from './components/todo-parent/display-todo/display-todo.component';
 import { HomeComponent } from './components/home/home.component';
+import { RoutesComponent } from './components/routes/routes.component';
+import { DashboardComponent } from './components/routes/dashboard/dashboard.component';
+import { OtherComponent } from './components/routes/other/other.component';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -55,6 +58,14 @@ const routes: Routes = [
   { path: 'directive-testing', component: DirectiveTestingComponent },
   { path: 'service-testing', component: ServiceTestingComponent },
   { path: 'todo', component: TodoParentComponent },
+  {
+    path: 'route',
+    component: RoutesComponent,
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'other', component: OtherComponent },
+    ],
+  },
 ];
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
@@ -90,6 +101,9 @@ const routes: Routes = [
     TodoInputComponent,
     DisplayTodoComponent,
     HomeComponent,
+    RoutesComponent,
+    DashboardComponent,
+    OtherComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
   providers: [LoggerService],

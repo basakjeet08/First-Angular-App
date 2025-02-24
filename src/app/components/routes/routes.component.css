@@ -1,0 +1,13 @@
+#outer-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+#button-container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 16px;
+}

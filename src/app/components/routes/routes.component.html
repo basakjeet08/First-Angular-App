@@ -1,0 +1,13 @@
+<div id="outer-container">
+  <!-- Button Container -->
+  <div id="button-container">
+    <button (click)="onLoginClick()">
+      {{ isUserLogged ? "Log Out" : "Login" }}
+    </button>
+    <button (click)="onDashboardClick()">Dashboard</button>
+    <button (click)="onOtherClick()">Other</button>
+  </div>
+
+  <!-- Router outlet for the child components -->
+  <router-outlet />
+</div>

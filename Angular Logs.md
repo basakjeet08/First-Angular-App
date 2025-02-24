@@ -104,3 +104,24 @@
 - Learned the basic thought process of creating a service layer while creating a project
 - Created a basic project to implement services and its concepts
 - Created a basic TODO Application using Services
+
+## Module 27 - Changing Pages with Routing :-
+- Introduction to Routing and how to enable routing
+- Why is routing required rather than having the traditional a href links 
+- How the Router Link Navigation Work
+- How to navigate programatically between two pages
+- Learned about Relative and absolute paths 
+- Learned how to pass params , query and fragments between components
+- Learned about nested routing and how to implement wild card for Error page
+- Learned about guards (canActivate , canActivateChild , canDeactivate)
+- Learned how to outsource guards logic to the components using interfaces
+- Learned static and dynamic data passing between components
+- Learned how to load data using a resolver
+- Significance of Hash Route and why should we use it
+
+## Module 28 - Course Project - Routing :-
+- Learned how to build routing for a project 
+- Created a basic project for more understanding over routing
+- Implemented various concepts of routing in the project 
+
+## Module 29 - 
