@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { interval, Observable, Subscription } from 'rxjs';
 
 @Component({
@@ -101,6 +101,6 @@ export class ObservableTestingComponent implements OnDestroy {
 
   // We clean our custom subscriptions to prevent memory leaks
   ngOnDestroy(): void {
-    this.countersubscription.unsubscribe();
+    this.countersubscription?.unsubscribe();
   }
 }

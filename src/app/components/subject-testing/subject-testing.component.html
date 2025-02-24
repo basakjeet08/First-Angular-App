@@ -1,0 +1,14 @@
+<div id="outer-container">
+  <!-- Query Parameter Container -->
+  <div id="input-container">
+    <input type="text" placeholder="Enter Name Query" [(ngModel)]="query" />
+    <button (click)="onSearchClick()">Search</button>
+  </div>
+
+  <!-- Grid Container -->
+  <div id="grid-container">
+    <div class="card" *ngFor="let name of nameList">
+      <p>{{ name }}</p>
+    </div>
+  </div>
+</div>

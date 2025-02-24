@@ -1,7 +1,4 @@
-import {
-  CanDashboardDeactivate,
-  dashboardDeactiveGuard,
-} from './guards/dashboard-deactive.guard';
+import { dashboardDeactiveGuard } from './guards/dashboard-deactive.guard';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -41,6 +38,7 @@ import { DashboardComponent } from './components/routes/dashboard/dashboard.comp
 import { OtherComponent } from './components/routes/other/other.component';
 import { authGuard } from './guards/auth.guard';
 import { ObservableTestingComponent } from './components/observable-testing/observable-testing.component';
+import { SubjectTestingComponent } from './components/subject-testing/subject-testing.component';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -78,6 +76,7 @@ const routes: Routes = [
     ],
   },
   { path: 'observable-testing', component: ObservableTestingComponent },
+  { path: 'subject-testing', component: SubjectTestingComponent },
 ];
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
@@ -117,6 +116,7 @@ const routes: Routes = [
     DashboardComponent,
     OtherComponent,
     ObservableTestingComponent,
+    SubjectTestingComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
   providers: [LoggerService],
