@@ -1,3 +1,7 @@
+import {
+  CanDashboardDeactivate,
+  dashboardDeactiveGuard,
+} from './guards/dashboard-deactive.guard';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -64,7 +68,11 @@ const routes: Routes = [
     component: RoutesComponent,
     canActivateChild: [authGuard],
     children: [
-      { path: 'dashboard', component: DashboardComponent },
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+        canDeactivate: [dashboardDeactiveGuard],
+      },
       { path: 'other', component: OtherComponent },
     ],
   },
