@@ -61,7 +61,7 @@
 - Learned about the component lifecycle and check its Hooks given
 - Learned about ng-content and @ContentChild(). Additional - ng-container, ng-template
 
-# Day - 04
+# Day 04
 
 ## Module 22 - Course Project - Components & Databinding :-
 
@@ -106,11 +106,12 @@
 - Created a basic TODO Application using Services
 
 ## Module 27 - Changing Pages with Routing :-
+
 - Introduction to Routing and how to enable routing
-- Why is routing required rather than having the traditional a href links 
+- Why is routing required rather than having the traditional a href links
 - How the Router Link Navigation Work
 - How to navigate programatically between two pages
-- Learned about Relative and absolute paths 
+- Learned about Relative and absolute paths
 - Learned how to pass params , query and fragments between components
 - Learned about nested routing and how to implement wild card for Error page
 - Learned about guards (canActivate , canActivateChild , canDeactivate)
@@ -120,8 +121,32 @@
 - Significance of Hash Route and why should we use it
 
 ## Module 28 - Course Project - Routing :-
-- Learned how to build routing for a project 
-- Created a basic project for more understanding over routing
-- Implemented various concepts of routing in the project 
 
-## Module 29 - 
+- Learned how to build routing for a project
+- Created a basic project for more understanding over routing
+- Implemented various concepts of routing in the project
+
+# Day 05
+
+## Module 29 - Understanding Observables :-
+
+- What are observables and how to use them
+- How to create our own custom observables
+- Why should we unsubscribe our custom made observables
+- Different types of event that can be passed from a observable
+- Operators in observables
+- What are subjects and when to use subjects
+- Subjects vs Event Emitters
+
+## Module 30 - Course Project - Observables :-
+
+- How to implement observables and subjects in a project
+
+## Project Work :-
+
+- Created a simple project using simple routing and services
+
+## React Router vs Angular Router
+
+- Router Difference Read : https://medium.com/@therealchrisrutherford/spa-routing-comparing-react-and-angular-c709ae69cc80
+- React Router is 3rd party and support for angular router is native and it comes with guards and other features which needs to be implemented by the developer in react

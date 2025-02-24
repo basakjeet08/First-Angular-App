@@ -1,0 +1,15 @@
+.col-container {
+  display: flex;
+
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 16px;
+
+  align-items: center;
+}

@@ -40,6 +40,7 @@ import { RoutesComponent } from './components/routes/routes.component';
 import { DashboardComponent } from './components/routes/dashboard/dashboard.component';
 import { OtherComponent } from './components/routes/other/other.component';
 import { authGuard } from './guards/auth.guard';
+import { ObservableTestingComponent } from './components/observable-testing/observable-testing.component';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -76,6 +77,7 @@ const routes: Routes = [
       { path: 'other', component: OtherComponent },
     ],
   },
+  { path: 'observable-testing', component: ObservableTestingComponent },
 ];
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
@@ -114,6 +116,7 @@ const routes: Routes = [
     RoutesComponent,
     DashboardComponent,
     OtherComponent,
+    ObservableTestingComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
   providers: [LoggerService],

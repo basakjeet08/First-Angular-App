@@ -1,0 +1,28 @@
+<div class="col-container">
+  <div class="row-container">
+    <!-- Button to start the observer created by predefined funcitons -->
+    <button (click)="activateSemiToggle()">
+      Semi Custom Observer {{ activated ? "Deactivate" : "Activate" }}
+    </button>
+
+    <!-- Button to start a custom observer -->
+    <button (click)="activateCustomToggle()">
+      Custom Observer {{ activated ? "Deactivate" : "Activate" }}
+    </button>
+
+    <!-- The counter of the observer -->
+    <p>Counter : {{ count }}</p>
+  </div>
+
+  <!-- Observables which showcase the complete and error states -->
+  <div class="row-container">
+    <!-- Showcase complete state button -->
+    <button (click)="onCompleteStateClick()">Complete State</button>
+
+    <!-- Showcase the error state button -->
+    <button (click)="onErrorStateClick()">Error State</button>
+
+    <!-- Paragraph to show counter -->
+    <p>State : {{ state }}</p>
+  </div>
+</div>
