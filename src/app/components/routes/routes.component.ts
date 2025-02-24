@@ -1,6 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -8,10 +7,9 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './routes.component.html',
   styleUrls: ['./routes.component.css'],
 })
-export class RoutesComponent implements OnInit, OnDestroy {
+export class RoutesComponent implements OnInit {
   // Values for the HTML Template and subscriptions
   isUserLogged: boolean = false;
-  private loggedSubscription!: Subscription;
 
   // Injecting the required services
   constructor(
@@ -23,15 +21,20 @@ export class RoutesComponent implements OnInit, OnDestroy {
   // Initializing the default values and subscribing to the user logged status changes
   ngOnInit(): void {
     this.isUserLogged = this.authService.isUserLogged();
-
-    // Subscribing to changes
-    this.loggedSubscription = this.authService.loggedEventEmitter.subscribe(
-      (isLogged: boolean) => (this.isUserLogged = isLogged)
-    );
   }
 
   // This function logs in the user
-  onLoginClick = () => this.authService.onAuthenticate();
+  toggleLogin() {
+    this.authService.onAuthenticate().then((isUserLogged) => {
+      this.isUserLogged = isUserLogged;
+
+      if (this.isUserLogged) {
+        this.navigateTo('dashboard');
+      } else {
+        this.navigateTo('/route');
+      }
+    });
+  }
 
   // This function is a utility function for navigation
   navigateTo(path: string) {
@@ -41,9 +44,4 @@ export class RoutesComponent implements OnInit, OnDestroy {
   // Below are the navigations for the button clicks
   onDashboardClick = () => this.navigateTo('dashboard');
   onOtherClick = () => this.navigateTo('other');
-
-  // Unsubscribing to the data subscriptions
-  ngOnDestroy(): void {
-    this.loggedSubscription.unsubscribe();
-  }
 }

@@ -35,6 +35,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RoutesComponent } from './components/routes/routes.component';
 import { DashboardComponent } from './components/routes/dashboard/dashboard.component';
 import { OtherComponent } from './components/routes/other/other.component';
+import { authGuard } from './guards/auth.guard';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -61,6 +62,7 @@ const routes: Routes = [
   {
     path: 'route',
     component: RoutesComponent,
+    canActivateChild: [authGuard],
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'other', component: OtherComponent },
