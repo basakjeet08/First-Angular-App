@@ -1,0 +1,142 @@
+<form (ngSubmit)="onSignUpClick()" #formContainer="ngForm">
+  <h3>Sign Up Form</h3>
+
+  <!-- Name Input Container -->
+  <div class="input-container">
+    <div class="row-container">
+      <!-- First name input -->
+      <input
+        type="text"
+        name="firstname"
+        placeholder="Enter your firstname"
+        required
+        ngModel
+        #firstname="ngModel"
+      />
+
+      <!-- Last Name input -->
+      <input
+        type="text"
+        name="lastname"
+        placeholder="Enter your lastname"
+        required
+        ngModel
+        #lastname="ngModel"
+      />
+    </div>
+
+    <!-- First name and last name error message -->
+    <p
+      class="error-text"
+      *ngIf="
+        (!firstname.valid && firstname.touched) ||
+        (!lastname.valid && lastname.touched)
+      "
+    >
+      Please Check the first and last name inputs
+    </p>
+  </div>
+
+  <!-- Username input container -->
+  <div class="input-container">
+    <!-- Username input -->
+    <input
+      type="text"
+      name="username"
+      placeholder="Enter a Valid Username"
+      required
+      ngModel
+      #username="ngModel"
+    />
+
+    <!-- Error text for username -->
+    <p class="error-text" *ngIf="!username.valid && username.touched">
+      Check the username input
+    </p>
+  </div>
+
+  <!-- Email Input Container -->
+  <div class="input-container">
+    <!-- Input Field -->
+    <input
+      type="email"
+      name="email"
+      placeholder="Enter a Valid Email"
+      required
+      email
+      ngModel
+      #email="ngModel"
+    />
+
+    <!-- Error message for email input -->
+    <p class="error-text" *ngIf="!email.valid && email.touched">
+      Check email input field
+    </p>
+  </div>
+
+  <!-- Phone Number Container -->
+  <div class="input-container">
+    <div class="row-container">
+      <!-- Phone number input field -->
+      <input
+        type="number"
+        name="phoneNumber"
+        placeholder="Phone number"
+        ngModel
+      />
+
+      <!-- Whatsapp number input field -->
+      <input
+        type="number"
+        name="whatsappNumber"
+        placeholder="Whatsapp number"
+        required
+        ngModel
+        #whatsappNumber="ngModel"
+      />
+    </div>
+
+    <!-- Error text for the number field -->
+    <p
+      class="error-text"
+      *ngIf="!whatsappNumber.valid && whatsappNumber.touched"
+    >
+      Please check the provided Phone Number
+    </p>
+  </div>
+
+  <!-- Password input field -->
+  <input
+    type="password"
+    name="password"
+    placeholder="Enter your password"
+    required
+    ngModel
+    #password="ngModel"
+  />
+
+  <!-- Confirm password input field -->
+  <input
+    type="password"
+    name="confirmPassword"
+    placeholder="Confirm your password"
+    required
+    ngModel
+    #confirmPassword="ngModel"
+  />
+
+  <!-- Error text for the password fields -->
+  <p
+    class="error-text"
+    *ngIf="
+      password.dirty &&
+      confirmPassword.dirty &&
+      password.value !== confirmPassword.value
+    "
+  >
+    The provided password and confirm password doesn't match
+  </p>
+
+  <!-- This is the submit button for the form -->
+  <button type="submit" [disabled]="!formContainer.valid">Sign Up</button>
+</form>

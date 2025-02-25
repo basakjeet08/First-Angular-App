@@ -141,6 +141,7 @@
 ## Module 30 - Course Project - Observables :-
 
 - How to implement observables and subjects in a project
+- Question -> What is the use case of operators and why not use basic filter methods / Refer to the subject-testing component
 
 ## Project Work :-
 
@@ -150,3 +151,14 @@
 
 - Router Difference Read : https://medium.com/@therealchrisrutherford/spa-routing-comparing-react-and-angular-c709ae69cc80
 - React Router is 3rd party and support for angular router is native and it comes with guards and other features which needs to be implemented by the developer in react
+
+# Day 06
+
+## Module 31 - Handling Forms in Angular Apps
+
+- Why should we not use the traditional form submittion method
+- The two ways to handle form in Angular (Template Driven & Reactive)
+- How to handle form in template driven approach
+- How can we validate the form during template driven approach
+- How can we show error messages when the form is invalid or keep the submit button disabled
+- How to play around with local reference and ViewChild() and when to use one way binding and two way binding
