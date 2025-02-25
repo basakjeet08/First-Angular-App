@@ -18,15 +18,7 @@
     </div>
 
     <!-- Error text for the firstname and last name inputs -->
-    <p
-      class="error-text"
-      *ngIf="
-        (!signUpForm.get('name.firstName')?.valid &&
-          signUpForm.get('name.firstName')?.touched) ||
-        (!signUpForm.get('name.lastName')?.valid &&
-          signUpForm.get('name.lastName')?.touched)
-      "
-    >
+    <p class="error-text" *ngIf="isNameError">
       Please enter the values in the firstname and last field
     </p>
   </div>
@@ -40,13 +32,7 @@
     />
 
     <!-- Error text for the username input field -->
-    <p
-      class="error-text"
-      *ngIf="
-        !signUpForm.get('username')?.valid &&
-        signUpForm.get('username')?.touched
-      "
-    >
+    <p class="error-text" *ngIf="isUsernameError">
       Please Enter a valid Username !!
     </p>
   </div>
@@ -60,12 +46,7 @@
     />
 
     <!-- Error text for the email input field -->
-    <p
-      class="error-text"
-      *ngIf="
-        !signUpForm.get('email')?.valid && signUpForm.get('email')?.touched
-      "
-    >
+    <p class="error-text" *ngIf="isEmailError">
       Please Enter a valid Email address !!
     </p>
   </div>
@@ -89,15 +70,19 @@
     </div>
 
     <!-- Error text for the phone number field -->
-    <p
-      class="error-text"
-      *ngIf="
-        !signUpForm.get('contactInfo.phoneNumber')?.valid &&
-        signUpForm.get('contactInfo.phoneNumber')?.touched
-      "
-    >
+    <p class="error-text" *ngIf="isPhoneNumberError">
       Enter a valid Phone Number
     </p>
+  </div>
+
+  <!-- Interest Container group -->
+  <div class="interest-container" formArrayName="interests">
+    <div *ngFor="let interest of interests.controls; let i = index">
+      <input type="text" placeholder="Enter interest" [formControlName]="i" />
+    </div>
+
+    <!-- Button to add another input -->
+    <button type="button" (click)="onInterestAdd()">Add</button>
   </div>
 
   <!-- Input container for password field -->
@@ -117,19 +102,11 @@
     />
 
     <!-- This is the error text for the password group -->
-    <p
-      class="error-text"
-      *ngIf="
-        (!signUpForm.get('passwordInfo.password')?.valid &&
-          signUpForm.get('passwordInfo.password')?.touched) ||
-        (!signUpForm.get('passwordInfo.confirmPassword')?.valid &&
-          signUpForm.get('passwordInfo.confirmPassword')?.touched)
-      "
-    >
+    <p class="error-text" *ngIf="isPasswordInvalid">
       Please enter valid password and do not keep it empty
     </p>
   </div>
 
   <!-- This button is used to submit to a form -->
-  <button type="submit">Sign Up User</button>
+  <button type="submit" [disabled]="!signUpForm.valid">Sign Up User</button>
 </form>

@@ -45,3 +45,10 @@ input.ng-invalid.ng-touched {
   font-size: 12px;
   color: rgb(216, 63, 63);
 }
+
+.interest-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+}

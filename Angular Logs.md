@@ -162,3 +162,5 @@
 - How can we validate the form during template driven approach && Reactive forms approach
 - How can we show error messages when the form is invalid or keep the submit button disabled
 - How to play around with local reference and ViewChild() and when to use one way binding and two way binding
+- How to use validators and what are the various types of validators that can be used for reactive form approach
+- How to create our own validation logics and run them along with angular reactive form approach.
