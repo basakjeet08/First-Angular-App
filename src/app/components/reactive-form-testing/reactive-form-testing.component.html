@@ -1,0 +1,135 @@
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmitClick()">
+  <!-- User's name and lastname input container -->
+  <div class="input-container">
+    <div class="row-container" formGroupName="name">
+      <!-- First name input field -->
+      <input
+        type="text"
+        placeholder="Enter your firstname"
+        formControlName="firstName"
+      />
+
+      <!-- Last Name input field -->
+      <input
+        type="text"
+        placeholder="Enter your lastname"
+        formControlName="lastName"
+      />
+    </div>
+
+    <!-- Error text for the firstname and last name inputs -->
+    <p
+      class="error-text"
+      *ngIf="
+        (!signUpForm.get('name.firstName')?.valid &&
+          signUpForm.get('name.firstName')?.touched) ||
+        (!signUpForm.get('name.lastName')?.valid &&
+          signUpForm.get('name.lastName')?.touched)
+      "
+    >
+      Please enter the values in the firstname and last field
+    </p>
+  </div>
+
+  <!-- Input container for the username input field -->
+  <div class="input-container">
+    <input
+      type="text"
+      placeholder="Enter your Username"
+      formControlName="username"
+    />
+
+    <!-- Error text for the username input field -->
+    <p
+      class="error-text"
+      *ngIf="
+        !signUpForm.get('username')?.valid &&
+        signUpForm.get('username')?.touched
+      "
+    >
+      Please Enter a valid Username !!
+    </p>
+  </div>
+
+  <!-- Input container for the email input field -->
+  <div class="input-container">
+    <input
+      type="email"
+      placeholder="Enter your Email"
+      formControlName="email"
+    />
+
+    <!-- Error text for the email input field -->
+    <p
+      class="error-text"
+      *ngIf="
+        !signUpForm.get('email')?.valid && signUpForm.get('email')?.touched
+      "
+    >
+      Please Enter a valid Email address !!
+    </p>
+  </div>
+
+  <!-- Input container for contact info -->
+  <div class="input-container">
+    <div class="row-container" formGroupName="contactInfo">
+      <!-- Input field for phone number -->
+      <input
+        type="number"
+        placeholder="Enter phone Number"
+        formControlName="phoneNumber"
+      />
+
+      <!-- Input field for whatsapp number -->
+      <input
+        type="number"
+        placeholder="Enter Whatsapp Number"
+        formControlName="whatsappNumber"
+      />
+    </div>
+
+    <!-- Error text for the phone number field -->
+    <p
+      class="error-text"
+      *ngIf="
+        !signUpForm.get('contactInfo.phoneNumber')?.valid &&
+        signUpForm.get('contactInfo.phoneNumber')?.touched
+      "
+    >
+      Enter a valid Phone Number
+    </p>
+  </div>
+
+  <!-- Input container for password field -->
+  <div class="input-container" formGroupName="passwordInfo">
+    <!-- Password Field Entry -->
+    <input
+      type="password"
+      placeholder="Enter your password"
+      formControlName="password"
+    />
+
+    <!-- Confirm Password Entry -->
+    <input
+      type="password"
+      placeholder="Confirm your password"
+      formControlName="confirmPassword"
+    />
+
+    <!-- This is the error text for the password group -->
+    <p
+      class="error-text"
+      *ngIf="
+        (!signUpForm.get('passwordInfo.password')?.valid &&
+          signUpForm.get('passwordInfo.password')?.touched) ||
+        (!signUpForm.get('passwordInfo.confirmPassword')?.valid &&
+          signUpForm.get('passwordInfo.confirmPassword')?.touched)
+      "
+    >
+      Please enter valid password and do not keep it empty
+    </p>
+  </div>
+
+  <!-- This button is used to submit to a form -->
+  <button type="submit">Sign Up User</button>
+</form>

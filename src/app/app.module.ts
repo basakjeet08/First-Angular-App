@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { InterpolationComponent } from './components/interpolation/interpolation.component';
 import { PropBindingComponent } from './components/prop-binding/prop-binding.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { CounterComponent } from './components/counter/counter.component';
@@ -40,6 +40,7 @@ import { authGuard } from './guards/auth.guard';
 import { ObservableTestingComponent } from './components/observable-testing/observable-testing.component';
 import { SubjectTestingComponent } from './components/subject-testing/subject-testing.component';
 import { FormTestingComponent } from './components/form-testing/form-testing.component';
+import { ReactiveFormTestingComponent } from './components/reactive-form-testing/reactive-form-testing.component';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -79,6 +80,7 @@ const routes: Routes = [
   { path: 'observable-testing', component: ObservableTestingComponent },
   { path: 'subject-testing', component: SubjectTestingComponent },
   { path: 'form-testing', component: FormTestingComponent },
+  { path: 'reactive-form-testing', component: ReactiveFormTestingComponent },
 ];
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
@@ -120,8 +122,14 @@ const routes: Routes = [
     ObservableTestingComponent,
     SubjectTestingComponent,
     FormTestingComponent,
+    ReactiveFormTestingComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule,
+  ],
   providers: [LoggerService],
   bootstrap: [AppComponent],
 })

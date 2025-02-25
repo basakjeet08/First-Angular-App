@@ -159,6 +159,6 @@
 - Why should we not use the traditional form submittion method
 - The two ways to handle form in Angular (Template Driven & Reactive)
 - How to handle form in template driven approach
-- How can we validate the form during template driven approach
+- How can we validate the form during template driven approach && Reactive forms approach
 - How can we show error messages when the form is invalid or keep the submit button disabled
 - How to play around with local reference and ViewChild() and when to use one way binding and two way binding
