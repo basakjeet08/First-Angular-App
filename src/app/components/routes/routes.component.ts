@@ -43,5 +43,11 @@ export class RoutesComponent implements OnInit {
 
   // Below are the navigations for the button clicks
   onDashboardClick = () => this.navigateTo('dashboard');
-  onOtherClick = () => this.navigateTo('other');
+  onOtherClick() {
+    this.router.navigate(['other'], {
+      relativeTo: this.route,
+      queryParams: { editMode: 1, isAdmin: 1 },
+      fragment: 'loading',
+    });
+  }
 }
