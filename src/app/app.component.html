@@ -6,7 +6,14 @@
         <li class="outer-nav-option">
           Day 01
           <ul class="inner-nav-container">
-            <li><a routerLink="/">Home Page</a></li>
+            <li>
+              <a
+                routerLink="/"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Home Page</a
+              >
+            </li>
           </ul>
         </li>
 
@@ -14,12 +21,34 @@
         <li class="outer-nav-option">
           Day 02
           <ul class="inner-nav-container">
-            <li><a routerLink="/interpolation">String Interpolation</a></li>
-            <li><a routerLink="/prop-binding">Property Binding</a></li>
-            <li><a routerLink="/event-binding">Event Binding</a></li>
-            <li><a routerLink="/two-way-binding">2 Way Binding</a></li>
-            <li><a routerLink="/login-form">Login Form</a></li>
-            <li><a routerLink="/counter">Counter</a></li>
+            <li>
+              <a routerLink="/interpolation" routerLinkActive="active">
+                String Interpolation
+              </a>
+            </li>
+            <li>
+              <a routerLink="/prop-binding" routerLinkActive="active">
+                Property Binding
+              </a>
+            </li>
+            <li>
+              <a routerLink="/event-binding" routerLinkActive="active">
+                Event Binding
+              </a>
+            </li>
+            <li>
+              <a routerLink="/two-way-binding" routerLinkActive="active">
+                2 Way Binding
+              </a>
+            </li>
+            <li>
+              <a routerLink="/login-form" routerLinkActive="active">
+                Login Form
+              </a>
+            </li>
+            <li>
+              <a routerLink="/counter" routerLinkActive="active"> Counter </a>
+            </li>
           </ul>
         </li>
 
@@ -28,20 +57,34 @@
           Day 03
           <ul class="inner-nav-container">
             <li>
-              <a routerLink="/assignment03">Directives - Assignment 03</a>
+              <a routerLink="/assignment03" routerLinkActive="active">
+                Directives - Assignment 03
+              </a>
             </li>
             <li>
-              <a routerLink="/component-communication-parent"
-                >Communication B/w Components</a
+              <a
+                routerLink="/component-communication-parent"
+                routerLinkActive="active"
               >
+                Communication B/w Components
+              </a>
             </li>
             <li>
-              <a routerLink="/template-view-child-diff"
-                >Template and ViewChild()</a
+              <a
+                routerLink="/template-view-child-diff"
+                routerLinkActive="active"
               >
+                Template and ViewChild()
+              </a>
             </li>
-            <li><a routerLink="/ng-tags">Ng Tags</a></li>
-            <li><a routerLink="/directive-testing">Custom Directives</a></li>
+            <li>
+              <a routerLink="/ng-tags" routerLinkActive="active">Ng Tags</a>
+            </li>
+            <li>
+              <a routerLink="/directive-testing" routerLinkActive="active">
+                Custom Directives
+              </a>
+            </li>
           </ul>
         </li>
 
@@ -49,8 +92,14 @@
         <li class="outer-nav-option">
           Day 04
           <ul class="inner-nav-container">
-            <li><a routerLink="/service-testing">Service</a></li>
-            <li><a routerLink="/todo">Todo Project</a></li>
+            <li>
+              <a routerLink="/service-testing" routerLinkActive="active">
+                Service
+              </a>
+            </li>
+            <li>
+              <a routerLink="/todo" routerLinkActive="active">Todo Project</a>
+            </li>
           </ul>
         </li>
 
@@ -58,9 +107,19 @@
         <li class="outer-nav-option">
           Day 05
           <ul class="inner-nav-container">
-            <li><a routerLink="/route">Routes</a></li>
-            <li><a routerLink="/observable-testing">Observable</a></li>
-            <li><a routerLink="/subject-testing">Subjects</a></li>
+            <li>
+              <a routerLink="/route" routerLinkActive="active">Routes</a>
+            </li>
+            <li>
+              <a routerLink="/observable-testing" routerLinkActive="active">
+                Observable
+              </a>
+            </li>
+            <li>
+              <a routerLink="/subject-testing" routerLinkActive="active">
+                Subjects
+              </a>
+            </li>
           </ul>
         </li>
 
@@ -68,9 +127,15 @@
         <li class="outer-nav-option">
           Day 06
           <ul class="inner-nav-container">
-            <li><a routerLink="/form-testing">Form Testing</a></li>
             <li>
-              <a routerLink="/reactive-form-testing"> Reactive Form Testing </a>
+              <a routerLink="/form-testing" routerLinkActive="active">
+                Form Testing
+              </a>
+            </li>
+            <li>
+              <a routerLink="/reactive-form-testing" routerLinkActive="active">
+                Reactive Form Testing
+              </a>
             </li>
           </ul>
         </li>

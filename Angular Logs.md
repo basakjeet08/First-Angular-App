@@ -173,3 +173,19 @@
 ## Random Project Work :-
 
 - Created a project to demonstrate the use of forms.
+
+# Day 07
+
+## Module 33 - Using Pipes to Transform Output
+
+- Learned what are pipes and why should we use them.
+- Learned to create our own pipes and use them
+- Learned about the various different types of pipes present
+
+## Module 34 - Making HTTP Requests
+
+- Learned about HTTP Requests
+- Learned how to run basic HTTP Requests like get , post , put , delete , etc.
+- Learned how to add custom headers to the requests
+- Learned about interceptors and how to implement our own interceptors
+- Learned how the data is passed to the component from HTTP Requests
