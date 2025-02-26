@@ -164,3 +164,12 @@
 - How to play around with local reference and ViewChild() and when to use one way binding and two way binding
 - How to use validators and what are the various types of validators that can be used for reactive form approach
 - How to create our own validation logics and run them along with angular reactive form approach.
+
+## Module 32 - Course Project - Forms
+
+- Implemented the reactive forms in a project and learned how it works
+- Implemented various concepts of forms like validation, custom validation , form groups etc.
+
+## Random Project Work :-
+
+- Created a project to demonstrate the use of forms.

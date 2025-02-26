@@ -125,5 +125,6 @@ export class ReactiveFormTestingComponent {
   // This function is invoked when the form is submitted
   onSubmitClick() {
     console.log(this.signUpForm.value);
+    this.signUpForm.reset();
   }
 }
