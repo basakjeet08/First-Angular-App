@@ -42,6 +42,7 @@ import { SubjectTestingComponent } from './components/subject-testing/subject-te
 import { FormTestingComponent } from './components/form-testing/form-testing.component';
 import { ReactiveFormTestingComponent } from './components/reactive-form-testing/reactive-form-testing.component';
 import { HttpTestingComponent } from './components/http-testing/http-testing.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -132,6 +133,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [LoggerService],
   bootstrap: [AppComponent],

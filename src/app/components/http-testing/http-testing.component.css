@@ -5,6 +5,19 @@
   gap: 32px;
 }
 
+.input-container {
+  width: 50vw;
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 16px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
 .card-container {
   width: 50vw;
 

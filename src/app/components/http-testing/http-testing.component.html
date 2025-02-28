@@ -1,12 +1,43 @@
 <div id="outer-container">
-  <!-- Card Container for all the fetched data list -->
-  <div class="card-container" *ngFor="let data of dataList">
+  <!-- Container to input post  -->
+  <div class="input-container">
+    <!-- Title Input Container -->
+    <input
+      class="flex-1"
+      type="text"
+      placeholder="Enter Title"
+      [(ngModel)]="userInput.title"
+    />
+
+    <!-- Description Input Container -->
+    <input
+      class="flex-1"
+      type="text"
+      placeholder="Enter Body"
+      [(ngModel)]="userInput.body"
+    />
+
+    <!-- Input for User id Container -->
+    <input
+      type="number"
+      placeholder="Enter User Id"
+      [(ngModel)]="userInput.userId"
+    />
+
+    <!-- Submit Button to push the post -->
+    <button (click)="onSubmitClick()">Submit</button>
+  </div>
+
+  <!-- Card Container for all the fetched post list -->
+  <div class="card-container" *ngFor="let post of postList">
     <div class="col-container">
-      <p>{{ data.title }}</p>
-      <p>{{ data.description }}</p>
+      <p>{{ post.id }}</p>
+      <p>{{ post.userId }}</p>
+      <p>{{ post.title }}</p>
+      <p>{{ post.body }}</p>
     </div>
 
-    <!-- Button to delete data from the database -->
-    <button (click)="onDeleteClick(data.id)">Delete</button>
+    <!-- Button to delete post from the post -->
+    <button (click)="onDeleteClick(post.id)">Delete</button>
   </div>
 </div>
