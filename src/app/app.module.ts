@@ -41,6 +41,7 @@ import { ObservableTestingComponent } from './components/observable-testing/obse
 import { SubjectTestingComponent } from './components/subject-testing/subject-testing.component';
 import { FormTestingComponent } from './components/form-testing/form-testing.component';
 import { ReactiveFormTestingComponent } from './components/reactive-form-testing/reactive-form-testing.component';
+import { HttpTestingComponent } from './components/http-testing/http-testing.component';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -81,6 +82,7 @@ const routes: Routes = [
   { path: 'subject-testing', component: SubjectTestingComponent },
   { path: 'form-testing', component: FormTestingComponent },
   { path: 'reactive-form-testing', component: ReactiveFormTestingComponent },
+  { path: 'http-testing', component: HttpTestingComponent },
 ];
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
@@ -123,6 +125,7 @@ const routes: Routes = [
     SubjectTestingComponent,
     FormTestingComponent,
     ReactiveFormTestingComponent,
+    HttpTestingComponent,
   ],
   imports: [
     BrowserModule,

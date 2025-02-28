@@ -1,0 +1,12 @@
+<div id="outer-container">
+  <!-- Card Container for all the fetched data list -->
+  <div class="card-container" *ngFor="let data of dataList">
+    <div class="col-container">
+      <p>{{ data.title }}</p>
+      <p>{{ data.description }}</p>
+    </div>
+
+    <!-- Button to delete data from the database -->
+    <button (click)="onDeleteClick(data.id)">Delete</button>
+  </div>
+</div>
