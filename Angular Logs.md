@@ -182,6 +182,8 @@
 - Learned to create our own pipes and use them
 - Learned about the various different types of pipes present
 
+# Day 08
+
 ## Module 34 - Making HTTP Requests
 
 - Learned about HTTP Requests
@@ -190,11 +192,16 @@
 - Learned about interceptors and how to implement our own interceptors
 - Learned how the data is passed to the component from HTTP Requests
 
-# Day 08
-
 ## Module 35 - Course Project - HTTP
 
 - Created a Firebase project in the firebase console and used its database services
 - Implemented HTTP Requests in a real project and learned how we can fetch and post data
 - Implemented our own Interceptors and custom headers
 - Trying to modularize the whole process with a generic wrapper function for data and error handling.
+
+## Module 36 - Authentication and Route
+
+- Learned how routes works
+- What are the different form of routes (public , private routes)
+- How to handle error
+- How to manage roles during routing.

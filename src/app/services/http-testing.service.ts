@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Post } from '../Models/Post';
 import { Subject } from 'rxjs';
@@ -30,10 +30,17 @@ export class HttpTestingService {
 
   // This function fetches all the post from the api request
   fetchPosts() {
-    this.http.get<Post[]>(`${this.URL}/posts`).subscribe((response) => {
-      this.postList = response;
-      this.postListSubject.next(this.getDataList());
-    });
+    this.http
+      .get<Post[]>(`${this.URL}/posts`, {
+        // This is how you can add your own Header
+        headers: new HttpHeaders({
+          'Custom-Header': 'This is my custom header',
+        }),
+      })
+      .subscribe((response) => {
+        this.postList = response;
+        this.postListSubject.next(this.getDataList());
+      });
   }
 
   // This function posts post
