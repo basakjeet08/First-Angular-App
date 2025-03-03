@@ -205,3 +205,19 @@
 - What are the different form of routes (public , private routes)
 - How to handle error
 - How to manage roles during routing.
+
+# Day 09
+
+## Module 36 - Course Project - HTTP
+
+- Created a Todo List Application using a custom backend
+- Implemented the basic CRUD API calls
+- Implemented HTTP Authorization and routing for public and private routes
+- Implemented the auth guards and token interceptors
+- Implemented the refresh token generation and refreshing the token logic
+
+## Module 37 - Dynamic Components
+
+- Learned about the Two ways to create dynamic components
+- Created a alert Component that is shown dynamically whenever there is a error
+- Created a dynamic Loader CSS Component

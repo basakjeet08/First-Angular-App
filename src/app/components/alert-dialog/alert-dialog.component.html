@@ -1,0 +1,8 @@
+<!-- Full Screen Overlay -->
+<div id="outer-div" (click)="onCloseClick()">
+  <!-- Card containing the error message and the button to close the error overlay -->
+  <div class="card-container">
+    {{ errorMessage }}
+    <button (click)="onCloseClick()">Close</button>
+  </div>
+</div>

@@ -45,6 +45,8 @@ import { HttpTestingComponent } from './components/http-testing/http-testing.com
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { LoggingInterceptor } from './interceptors/logging.interceptor';
+import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
+import { DynamicComponentsTestingComponent } from './components/dynamic-components-testing/dynamic-components-testing.component';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -86,6 +88,10 @@ const routes: Routes = [
   { path: 'form-testing', component: FormTestingComponent },
   { path: 'reactive-form-testing', component: ReactiveFormTestingComponent },
   { path: 'http-testing', component: HttpTestingComponent },
+  {
+    path: 'dynamic-component-testing',
+    component: DynamicComponentsTestingComponent,
+  },
 ];
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
@@ -129,6 +135,8 @@ const routes: Routes = [
     FormTestingComponent,
     ReactiveFormTestingComponent,
     HttpTestingComponent,
+    AlertDialogComponent,
+    DynamicComponentsTestingComponent,
   ],
   imports: [
     BrowserModule,
