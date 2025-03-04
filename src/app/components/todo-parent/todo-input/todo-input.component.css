@@ -1,11 +1,3 @@
-.input-container {
-  display: flex;
-  flex-direction: row;
-
-  gap: 24px;
-  padding: 24px;
-}
-
 .input-width {
   width: 400px;
 }

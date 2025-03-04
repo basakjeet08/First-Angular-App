@@ -1,6 +1,6 @@
 <div id="grid-container">
   <!-- Grid Items  -->
-  <div class="grid-item" *ngFor="let todo of todoList">
+  <div class="card-container col-container" *ngFor="let todo of todoList">
     <!-- Todo Title -->
     <h3 class="todo-title" [ngClass]="{ strike: todo.isCompleted }">
       {{ todo.title }}
@@ -12,9 +12,11 @@
     </p>
 
     <!-- Button to delete the Todo -->
-    <div class="button-container">
-      <button (click)="onDeleteClick(todo.id)">Delete</button>
-      <button (click)="toggleDoneState(todo.id)">
+    <div class="row-container">
+      <button class="destructive-btn" (click)="onDeleteClick(todo.id)">
+        Delete
+      </button>
+      <button class="secondary-btn" (click)="toggleDoneState(todo.id)">
         {{ todo.isCompleted ? "Reset" : "Mark as Done" }}
       </button>
     </div>
