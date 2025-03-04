@@ -1,8 +1,12 @@
-<form [formGroup]="signUpForm" (ngSubmit)="onSubmitClick()">
+<form
+  class="card-container col-container p-40"
+  [formGroup]="signUpForm"
+  (ngSubmit)="onSubmitClick()"
+>
   <h3>Sign Up Form</h3>
 
   <!-- User's name and lastname input container -->
-  <div class="input-container">
+  <div class="col-container">
     <div class="row-container" formGroupName="name">
       <!-- First name input field -->
       <input
@@ -26,7 +30,7 @@
   </div>
 
   <!-- Input container for the username input field -->
-  <div class="input-container">
+  <div class="col-container">
     <input
       type="text"
       placeholder="Enter your Username"
@@ -40,7 +44,7 @@
   </div>
 
   <!-- Input container for the email input field -->
-  <div class="input-container">
+  <div class="col-container">
     <input
       type="email"
       placeholder="Enter your Email"
@@ -54,7 +58,7 @@
   </div>
 
   <!-- Input container for contact info -->
-  <div class="input-container">
+  <div class="col-container">
     <div class="row-container" formGroupName="contactInfo">
       <!-- Input field for phone number -->
       <input
@@ -88,7 +92,7 @@
   </div>
 
   <!-- Input container for password field -->
-  <div class="input-container" formGroupName="passwordInfo">
+  <div class="col-container" formGroupName="passwordInfo">
     <!-- Password Field Entry -->
     <input
       type="password"
