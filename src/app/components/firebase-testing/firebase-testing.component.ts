@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FirebasePost } from 'src/app/Models/FirebasePost';
 import { FirebaseTestingService } from 'src/app/services/firebase-testing.service';
 
 @Component({
@@ -6,15 +7,29 @@ import { FirebaseTestingService } from 'src/app/services/firebase-testing.servic
   templateUrl: './firebase-testing.component.html',
   styleUrls: ['./firebase-testing.component.css'],
 })
-export class FirebaseTestingComponent {
+export class FirebaseTestingComponent implements OnInit {
   // This is the variable that store the user input
   userInput = {
     title: '',
-    description: ' ',
+    description: '',
   };
+
+  postData: FirebasePost[] = [];
 
   // Injecting the Service Class
   constructor(private firebaseService: FirebaseTestingService) {}
+
+  // This is called when the component is initialized
+  ngOnInit(): void {
+    this.fetchData();
+  }
+
+  // This function fetches the data from the firebase
+  fetchData() {
+    this.firebaseService
+      .fetchData()
+      .subscribe((postData) => (this.postData = postData));
+  }
 
   // This function is invoked when the user clicks on post data button
   onPostDataClick() {

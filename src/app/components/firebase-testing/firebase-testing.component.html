@@ -11,10 +11,20 @@
   <input
     type="text"
     name="description"
-    placeholder="Enter Title"
+    placeholder="Enter Description"
     [(ngModel)]="userInput.description"
   />
 
   <!-- Submit button -->
   <button type="submit">Send Data</button>
 </form>
+
+<!-- Post Data from the firebase -->
+<div class="grid-container">
+  <!-- Each Post Data -->
+  <div class="card-container" *ngFor="let post of postData">
+    <p>ID : {{ post.id }}</p>
+    <p>Title : {{ post.title }}</p>
+    <p>Description : {{ post.description }}</p>
+  </div>
+</div>
