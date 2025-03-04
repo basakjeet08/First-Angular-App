@@ -1,8 +1,12 @@
-<form (ngSubmit)="onSignUpClick()" #formContainer="ngForm">
+<form
+  class="card-container col-container p-40"
+  (ngSubmit)="onSignUpClick()"
+  #formContainer="ngForm"
+>
   <h3>Sign Up Form</h3>
 
   <!-- Name Input Container -->
-  <div class="input-container">
+  <div class="col-container">
     <div class="row-container">
       <!-- First name input -->
       <input
@@ -38,7 +42,7 @@
   </div>
 
   <!-- Username input container -->
-  <div class="input-container">
+  <div class="col-container">
     <!-- Username input -->
     <input
       type="text"
@@ -56,7 +60,7 @@
   </div>
 
   <!-- Email Input Container -->
-  <div class="input-container">
+  <div class="col-container">
     <!-- Input Field -->
     <input
       type="email"
@@ -75,7 +79,7 @@
   </div>
 
   <!-- Phone Number Container -->
-  <div class="input-container">
+  <div class="col-container">
     <div class="row-container">
       <!-- Phone number input field -->
       <input

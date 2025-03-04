@@ -1,26 +1,26 @@
-<div id="outer-container">
-  <h2>Ng Directives Assignment</h2>
-  <!-- Button to toggle visibility -->
-  <button (click)="onToggleVisibilityClick()">Display Details</button>
+<h2>Ng Directives Assignment</h2>
+<!-- Button to toggle visibility -->
+<button (click)="onToggleVisibilityClick()">Display Details</button>
 
-  <!-- Paragraph whose visibility is being toggled -->
-  <p
-    [ngClass]="{
-      visible: isParagraphVisible,
-      hidden: !isParagraphVisible
-    }"
-  >
-    Orewa Monkey D Luffy
-  </p>
+<!-- Paragraph whose visibility is being toggled -->
+<p
+  [ngClass]="{
+    visible: isParagraphVisible,
+    hidden: !isParagraphVisible
+  }"
+>
+  Orewa Monkey D Luffy
+</p>
 
-  <!-- Div which contains the logs of button clicks -->
+<!-- Div which contains the logs of button clicks -->
+<div class="grid-container">
   <div *ngFor="let log of logs; let i = index">
     <!-- All the Button Click Log -->
     <p
-      [ngStyle]="{ backgroundColor: i >= 5 ? 'var(--card)' : 'transparent' }"
-      [ngClass]="{
-        'primary-text': i >= 5
+      [ngStyle]="{
+        backgroundColor: i >= 5 ? 'var(--card--color)' : 'transparent'
       }"
+      [ngClass]="{ 'primary-text': i >= 5 }"
     >
       Log : {{ i }} ----------- Time : {{ log }}
     </p>

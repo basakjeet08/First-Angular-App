@@ -1,4 +1,4 @@
-#root {
+:host {
   min-height: 100vh;
   height: 100%;
   width: 100%;
@@ -6,19 +6,22 @@
   display: flex;
   flex-direction: column;
 
-  background: var(--background);
-  color: var(--onBackground);
+  background: var(--background--color);
+  color: var(--on--background--color);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+
+  background-color: var(--card--color);
 }
 
 nav {
-  display: flex;
-  flex-direction: row;
-
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-
-  background-color: var(--card);
+  width: 50%;
 }
 
 ul {
@@ -26,7 +29,6 @@ ul {
 }
 
 #outer-nav-container {
-  width: 50%;
   display: flex;
   justify-content: space-around;
 }
@@ -34,15 +36,15 @@ ul {
 .outer-nav-option {
   position: relative;
 
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: var(--padding--small);
+  border-radius: var(--border--radius);
 
   cursor: pointer;
 }
 
 .outer-nav-option:hover,
 a:hover {
-  background-color: var(--primary-color);
+  background-color: var(--primary--color);
 }
 
 .outer-nav-option:hover > .inner-nav-container {
@@ -58,22 +60,22 @@ a:hover {
   flex-direction: column;
 
   gap: 12px;
-  padding: 16px;
+  padding: var(--padding--small);
 
   z-index: 1;
-  border-radius: 8px;
-  background-color: var(--card);
+  border-radius: var(--border--radius);
+  background-color: var(--card--color);
 }
 
 a {
   display: block;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: var(--padding--small);
+  border-radius: var(--border--radius);
 
   white-space: nowrap;
 
   text-decoration: none;
-  color: var(--onBackground);
+  color: var(--on--background--color);
 }
 
 main {
@@ -87,5 +89,5 @@ main {
 }
 
 .active {
-  background-color: var(--primary-color);
+  background-color: var(--primary--color);
 }

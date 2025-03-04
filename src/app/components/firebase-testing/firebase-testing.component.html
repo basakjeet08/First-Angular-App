@@ -1,4 +1,4 @@
-<form (ngSubmit)="onPostDataClick()">
+<form class="row-container" (ngSubmit)="onPostDataClick()">
   <!-- Title Container -->
   <input
     type="text"
@@ -22,11 +22,13 @@
 <!-- Post Data from the firebase -->
 <div class="grid-container">
   <!-- Each Post Data -->
-  <div class="card-container" *ngFor="let post of postData">
+  <div class="card-container col-container" *ngFor="let post of postData">
     <p>ID : {{ post.id }}</p>
     <p>Title : {{ post.title }}</p>
     <p>Description : {{ post.description }}</p>
 
-    <button (click)="onDeleteClick(post.id)">Delete</button>
+    <button class="destructive-btn" (click)="onDeleteClick(post.id)">
+      Delete
+    </button>
   </div>
 </div>

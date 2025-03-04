@@ -1,4 +1,4 @@
-<div>
+<div class="col-container">
   <h2>Ng Tags Usage</h2>
 
   <!-- This button helps to show the ng container -->
@@ -10,9 +10,11 @@
     <p>The value of isVisible is {{ isVisible }}</p>
   </ng-container>
 
-  <div *ngIf="isLoggedIn; else notLoggedIn">
+  <div class="col-container" *ngIf="isLoggedIn; else notLoggedIn">
     <p>The user is logged In right now</p>
-    <button (click)="toggleLoginStatus()">Log Out</button>
+    <button class="destructive-btn" (click)="toggleLoginStatus()">
+      Log Out
+    </button>
   </div>
 
   <!-- Ng Template is used for optional rendering of any component (This wont be rendered in the DOM until and unless the else block for the ngIf is triggered. Moreover it is not rendered without a ngIf block)-->
