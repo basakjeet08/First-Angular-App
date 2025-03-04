@@ -16,10 +16,7 @@ export class AuthInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<unknown>> {
     // Adding the new Header to the previous request
     const modifiedRequest = request.clone({
-      headers: request.headers.append(
-        'Authorization',
-        'Bearer - Anirban Custom Token'
-      ),
+      headers: request.headers.append('Auth', 'Bearer - Anirban Custom Token'),
     });
 
     // We are letting the request go to the next set of interceptor or get sent

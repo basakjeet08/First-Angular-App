@@ -221,3 +221,9 @@
 - Learned about the Two ways to create dynamic components
 - Created a alert Component that is shown dynamically whenever there is a error
 - Created a dynamic Loader CSS Component
+
+## Module 34 - Making Http Requests using Firebase.
+
+- Learned how to use firebase to make api calls
+- Used firebase realtime database and firebase authentication
+- Make a simple api call service for firebase

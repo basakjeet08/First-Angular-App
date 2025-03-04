@@ -1,0 +1,20 @@
+<form (ngSubmit)="onPostDataClick()">
+  <!-- Title Container -->
+  <input
+    type="text"
+    name="title"
+    placeholder="Enter Title"
+    [(ngModel)]="userInput.title"
+  />
+
+  <!-- Description container -->
+  <input
+    type="text"
+    name="description"
+    placeholder="Enter Title"
+    [(ngModel)]="userInput.description"
+  />
+
+  <!-- Submit button -->
+  <button type="submit">Send Data</button>
+</form>
