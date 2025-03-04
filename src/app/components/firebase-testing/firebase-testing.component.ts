@@ -35,6 +35,11 @@ export class FirebaseTestingComponent implements OnInit {
   onPostDataClick() {
     this.firebaseService
       .postData(this.userInput.title, this.userInput.description)
-      .subscribe((result) => console.log(result));
+      .subscribe(() => this.fetchData());
+  }
+
+  // This function is called when the delete button is clicked
+  onDeleteClick(id: string) {
+    this.firebaseService.deletePost(id).subscribe(() => this.fetchData());
   }
 }

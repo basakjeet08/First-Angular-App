@@ -26,5 +26,7 @@
     <p>ID : {{ post.id }}</p>
     <p>Title : {{ post.title }}</p>
     <p>Description : {{ post.description }}</p>
+
+    <button (click)="onDeleteClick(post.id)">Delete</button>
   </div>
 </div>
