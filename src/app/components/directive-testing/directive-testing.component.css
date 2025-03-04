@@ -1,4 +1,11 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
 p {
-  padding: 12px;
-  margin-top: 8px;
+  padding: var(--padding--small);
+  border-radius: var(--border--radius);
 }

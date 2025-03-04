@@ -133,11 +133,6 @@ hr {
 
 /* Utility Card CSS */
 .card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  gap: 12px;
   padding: 24px;
 
   border-radius: var(--border--radius);
