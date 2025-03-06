@@ -155,7 +155,7 @@ const routes: Routes = [
     LoggerService,
 
     // The Interceptors should be present in order of their execution
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],

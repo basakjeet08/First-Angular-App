@@ -1,1 +1,23 @@
-<p>firebase-auth-testing works!</p>
+<form class="card-container col-container p-40" (ngSubmit)="onSignUpClick()">
+  <h3>Firebase Sign Up</h3>
+
+  <!-- Email Input field -->
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter email"
+    [(ngModel)]="userInput.email"
+  />
+
+  <!-- Password Input Field -->
+  <input
+    type="password"
+    name="password"
+    placeholder="Enter email"
+    [(ngModel)]="userInput.password"
+  />
+
+  <!-- Button to submit -->
+  <button type="submit">Sign Up</button>
+  <button type="button" (click)="onLoginClick()">Login</button>
+</form>
