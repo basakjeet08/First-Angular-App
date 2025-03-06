@@ -48,6 +48,7 @@ import { LoggingInterceptor } from './interceptors/logging.interceptor';
 import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
 import { DynamicComponentsTestingComponent } from './components/dynamic-components-testing/dynamic-components-testing.component';
 import { FirebaseTestingComponent } from './components/firebase-testing/firebase-testing.component';
+import { FirebaseAuthTestingComponent } from './components/firebase-auth-testing/firebase-auth-testing.component';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -94,6 +95,7 @@ const routes: Routes = [
     component: DynamicComponentsTestingComponent,
   },
   { path: 'firebase-testing', component: FirebaseTestingComponent },
+  { path: 'firebase-auth-testing', component: FirebaseAuthTestingComponent },
 ];
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
@@ -140,6 +142,7 @@ const routes: Routes = [
     AlertDialogComponent,
     DynamicComponentsTestingComponent,
     FirebaseTestingComponent,
+    FirebaseAuthTestingComponent,
   ],
   imports: [
     BrowserModule,
