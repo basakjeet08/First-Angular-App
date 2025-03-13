@@ -53,6 +53,7 @@ import { StoreModule } from '@ngrx/store';
 import { NgrxCounterComponent } from './components/ngrx-counter/ngrx-counter.component';
 import { ButtonsComponent } from './components/ngrx-counter/buttons/buttons.component';
 import { DisplayComponent } from './components/ngrx-counter/display/display.component';
+import { counterReducer } from './store/counter.reducer';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -158,7 +159,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({ counter: counterReducer }),
   ],
   providers: [
     LoggerService,

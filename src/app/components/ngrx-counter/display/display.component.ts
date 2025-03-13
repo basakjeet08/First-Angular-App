@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-display',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./display.component.css'],
 })
 export class DisplayComponent {
-  counter = 0;
+  // This is the value from the store stored here as a observable
+  counter$: Observable<number>;
+
+  // Injecting the required dependencies and filling the data from the store
+  constructor(private store: Store<{ counter: number }>) {
+    this.counter$ = this.store.select('counter');
+  }
 }

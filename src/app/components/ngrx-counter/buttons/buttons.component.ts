@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { decreament, increament } from 'src/app/store/counter.actions';
 
 @Component({
   selector: 'app-buttons',
@@ -6,13 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./buttons.component.css'],
 })
 export class ButtonsComponent {
+  // Injecting the necessary dependencies
+  constructor(private store: Store) {}
+
   // This function is invoked when the user clicks on the increase button
   onIncreaseClick() {
-    console.log('Increase Click');
+    this.store.dispatch(increament({ value: 1 }));
   }
 
   // This function is invoked when the user clicks on the decrease button
   onDecreaseClick() {
-    console.log('Decraese Click');
+    this.store.dispatch(decreament({ value: 1 }));
+  }
+
+  // This function is invoked when the user clicks on the increase double button
+  onIncreaseDoubleClick() {
+    this.store.dispatch(increament({ value: 2 }));
   }
 }
