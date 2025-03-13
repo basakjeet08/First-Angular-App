@@ -49,6 +49,10 @@ import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.com
 import { DynamicComponentsTestingComponent } from './components/dynamic-components-testing/dynamic-components-testing.component';
 import { FirebaseTestingComponent } from './components/firebase-testing/firebase-testing.component';
 import { FirebaseAuthTestingComponent } from './components/firebase-auth-testing/firebase-auth-testing.component';
+import { StoreModule } from '@ngrx/store';
+import { NgrxCounterComponent } from './components/ngrx-counter/ngrx-counter.component';
+import { ButtonsComponent } from './components/ngrx-counter/buttons/buttons.component';
+import { DisplayComponent } from './components/ngrx-counter/display/display.component';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -96,6 +100,7 @@ const routes: Routes = [
   },
   { path: 'firebase-testing', component: FirebaseTestingComponent },
   { path: 'firebase-auth-testing', component: FirebaseAuthTestingComponent },
+  { path: 'ngrx-counter', component: NgrxCounterComponent },
 ];
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
@@ -143,6 +148,9 @@ const routes: Routes = [
     DynamicComponentsTestingComponent,
     FirebaseTestingComponent,
     FirebaseAuthTestingComponent,
+    NgrxCounterComponent,
+    ButtonsComponent,
+    DisplayComponent,
   ],
   imports: [
     BrowserModule,
@@ -150,6 +158,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     HttpClientModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [
     LoggerService,
