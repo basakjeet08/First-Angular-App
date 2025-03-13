@@ -1,6 +1,6 @@
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { decreament, increament } from './counter.actions';
-import { tap, withLatestFrom } from 'rxjs';
+import { decreament, increament, initCounter, set } from './counter.actions';
+import { of, switchMap, tap, withLatestFrom } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { selectCount } from './counter.selector';
@@ -12,6 +12,17 @@ export class CounterEffects {
     private action$: Actions,
     private store: Store<{ counter: number }>
   ) {}
+
+  // This effects loads the counter data from the local storage and dispatches a set action
+  loadCounter = createEffect(() =>
+    this.action$.pipe(
+      ofType(initCounter),
+      switchMap(() => {
+        const counter = localStorage.getItem('count');
+        return of(counter ? set({ value: +counter }) : set({ value: 0 }));
+      })
+    )
+  );
 
   // This effect saves the counter state in the local storage
   saveCount = createEffect(
