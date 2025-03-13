@@ -5,4 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './buttons.component.html',
   styleUrls: ['./buttons.component.css'],
 })
-export class ButtonsComponent {}
+export class ButtonsComponent {
+  // This function is invoked when the user clicks on the increase button
+  onIncreaseClick() {
+    console.log('Increase Click');
+  }
+
+  // This function is invoked when the user clicks on the decrease button
+  onDecreaseClick() {
+    console.log('Decraese Click');
+  }
+}

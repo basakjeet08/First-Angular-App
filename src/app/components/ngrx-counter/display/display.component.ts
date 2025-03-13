@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './display.component.html',
   styleUrls: ['./display.component.css'],
 })
-export class DisplayComponent {}
+export class DisplayComponent {
+  counter = 0;
+}
