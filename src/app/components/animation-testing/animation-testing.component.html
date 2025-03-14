@@ -8,3 +8,15 @@
     Fade Animation Works
   </div>
 </div>
+
+
+<!-- Left Slide Animation Container -->
+<div class="col-container">
+  <!-- Button to toggle fade animation -->
+  <button (click)="toggleLeftSlide()">Fade Animation</button>
+
+  <!-- This is the component which is being animated -->
+  <div class="card-container div-size" *ngIf="isLeftSlideVisible" @leftSlideAnimation>
+    Left Slide Animation Works
+  </div>
+</div>
