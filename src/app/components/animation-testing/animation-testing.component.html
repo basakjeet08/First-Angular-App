@@ -1,0 +1,10 @@
+<!-- Fade Animation Container -->
+<div class="col-container">
+  <!-- Button to toggle fade animation -->
+  <button (click)="toggleFade()">Fade Animation</button>
+
+  <!-- This is the component which is being animated -->
+  <div class="card-container div-size" *ngIf="isFadeVisible" @fadeAnimation>
+    Fade Animation Works
+  </div>
+</div>

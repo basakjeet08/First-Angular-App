@@ -56,6 +56,8 @@ import { DisplayComponent } from './components/ngrx-counter/display/display.comp
 import { counterReducer } from './store/counter.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { CounterEffects } from './store/counter.effects';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AnimationTestingComponent } from './components/animation-testing/animation-testing.component';
 
 // These are the routes for this component / module
 const routes: Routes = [
@@ -104,6 +106,7 @@ const routes: Routes = [
   { path: 'firebase-testing', component: FirebaseTestingComponent },
   { path: 'firebase-auth-testing', component: FirebaseAuthTestingComponent },
   { path: 'ngrx-counter', component: NgrxCounterComponent },
+  { path: 'animation-testing', component: AnimationTestingComponent },
 ];
 
 // The NgModule decoration is used for every module created. Here app is considered as a module in the project
@@ -154,6 +157,7 @@ const routes: Routes = [
     NgrxCounterComponent,
     ButtonsComponent,
     DisplayComponent,
+    AnimationTestingComponent,
   ],
   imports: [
     BrowserModule,
@@ -163,6 +167,7 @@ const routes: Routes = [
     HttpClientModule,
     StoreModule.forRoot({ counter: counterReducer }),
     EffectsModule.forRoot([CounterEffects]),
+    BrowserAnimationsModule,
   ],
   providers: [
     LoggerService,
